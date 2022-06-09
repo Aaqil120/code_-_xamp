@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="jquery.validate.js"></script>
+        <script src="test_file.js"></script>
+        <script src="app2.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style2.css">
+        <style>.error{
+            display:block;
+            }</style>
+    </head>
+    <body>
+
+        <h1>Student Management System</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="webpage_1.html"><img src="web1.jpeg" alt="" width=" 50px"></a></li>
+                <li><a href="webpage_2.html">Add student</a></li>
+            </ul>
+        </div>
+
+        <form name="fmReg" id="form">
+            <table>
+                <tr>
+                    <td class="in">First Name</td>
+                    <td><input type="text" name=" fname" id="fname" placeholder="First Name" required></td>
+                </tr>
+                <tr>
+                    <td class="in">Surname</td>
+                    <td><input type="text" name="surname" id="surname" placeholder="Last Name"  title="Please enter your surname correctly" required></td>
+                </tr>
+                <tr>
+                    <td class="in">Email Address</td>
+                    <td><input type="email" name="email" id="email"  placeholder="Email Address" title="Please enter email address in proper format" required></td>
+                </tr>
+                <tr>
+                     <td class="in">Contact Number</td>
+                    <td><input type="tel" name="contact" id="contact" maxlength="8" size="12"  placeholder="Contact Number" title="Please enter proper contact number" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
+                </tr>
+                <tr>
+                    <td class="in">Address</td>
+                   <td><input type="text" name="address" id="address" placeholder="Address" title="Please enter proper address" required></td>
+               </tr>
+                <tr>
+                    <td class="in">Gender</td>
+                    <td><input type="radio" name="gender" id="gender" value="Male" checked>Male </input>
+                         <input type="radio" name="gender" id="gender" value="Female" >Female</input>
+                    </td>
+                </tr>
+                <table>
+                    
+                         <input type="submit" name="submit" id="InsertCustomer" value=Insert>
+                         <input type="reset" name="reset" id="reset" value="Reset">
+                         <input type="button" name="hide" id="hide" value="hide">
+                    
+        </form>
+           <table width="100%" id="tblData" border="1px">
+               <tr>
+                   <th>ID</th>
+                   <th>NAME</th>
+                   <th>SURNAME</th>
+                   <th>GENDER</th>
+                   <th>EMAIL</th>
+                   <th>CONTACT</th>
+                   <th>ADDRESS</th>
+                   <th>Actions</th>
+               </tr>
+           </table>    
+    </body>
+</html>
